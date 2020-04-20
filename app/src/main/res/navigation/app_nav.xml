@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_nav"
+    app:startDestination="@id/fragment1">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.navargssample.Fragment1"
+        android:label="Fragment1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2">
+<!--            <argument-->
+<!--                android:name="argh"-->
+<!--                app:argType="com.example.navargssample.ParcelableClass"-->
+<!--                app:nullable="true"-->
+<!--                android:defaultValue="@null" />-->
+            <argument
+                android:name="argh2"
+                android:defaultValue="@null" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.navargssample.Fragment2"
+        android:label="Fragment2" >
+        <argument
+            android:name="argh"
+            app:argType="com.example.navargssample.ParcelableClass"
+            app:nullable="true" />
+        <argument
+            android:name="argh2"
+            app:argType="com.example.navargssample.ParcelableClass"
+            app:nullable="true" />
+        <argument
+            android:name="stringy"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
